@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="theme-color" content="blue">
+	
+		<title>Mercadinho Cidade</title>
+		<style type="text/css" media="all">
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			header{
+				width: 100%;
+				height: 63px;
+				padding: 5px 0;
+				position: absolute;
+				display: flex;
+				justify-content: center;
+				background-image: linear-gradient(transparent, transparent);
+			}
+			header img{
+				width: 60px;
+				position: absolute;
+			}
+			::-webkit-scrollbar {
+    width: 0px;
+}
+			#secao-1{
+				width: 100%;
+				height: 70vh;
+				padding-bottom: 10px;
+				display: grid;
+				justify-content: center;
+				align-items: end;
+				background-image: linear-gradient(45deg, blue, red);
+				border-bottom-left-radius: 100px;
+			}
+			#secao-1 h1, #secao-1 p{
+				color: white;
+			}
+			#secao-1 h1{
+				margin: 30% 0 2% 10%;
+				font-family: 'rubik';
+				font-weight: 200;
+				font-size: 220%;
+			}
+			#secao-1 p{
+				margin-left: 10%;
+				font-family: 'raleway';
+			}
+			.vo{
+				width: 100%;
+				height: 185px;
+				margin: 0% auto;
+				overflow-x: scroll;
+					scroll-snap-type: x mandatory;
+			}
+			.pai{
+				width: 180%;
+				height: 100%;
+			  display: flex;
+			  justify-content: center;
+			  align-items: center;
+			}
+			.filhos{
+				scroll-snap-align: center;
+				width: 74vw;
+				height: 150px;
+				margin: 0 1%;
+				padding-top: 5px;
+				box-shadow: 0 0 15px rgb(0, 0, 0, .5);
+				border-radius: 25px;
+				display: grid;
+		    text-align: center;
+			}
+			.filhos:first-child{
+				background: #00ff397c;
+				background-image: url('grocery.png');
+				
+				background-size: 95%;
+				background-repeat: no-repeat;
+				background-position: -0% 15% ;
+			}
+			.filhos:last-child{
+				/*background: #ffffff37; */
+				background: #ff00008b;
+				background-image: url('meat2.png');
+				background-size: 99%;
+				background-position: -295% 5%;
+				background-repeat: no-repeat;
+			}
+			
+			.filhos p{
+				margin: 0 !important;
+				padding-top: 5px;
+				color: white;
+				font-family: 'comfortaa' !important;
+				font-size: 80%;
+				font-weight: bold;
+			}
+			.filhos h1{
+				margin:0px 0 0 0 !important;
+				font-family: 'nunito' !important;
+				font-size: 155% !important;
+				font-weight: bold !important;
+			}
+			.filhos p:last-child{
+				font-family: 'nunito' !important;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<img src="logoOF.png" alt="" />
+		</header>
+		<section id="secao-1">
+			<h1>Bem vindo ao Cidade</h1>
+		  <p>Venha nos conhecer</p>
+			<div class="vo">
+			<div class="pai">
+				<div class="filhos">
+					<p>Segunda e Terça</p>
+					<h1>INTER<br>FRUTAS</h1>
+					<p>Frutas, Verduras e Legumes</p>
+				</div>
+				<div class="filhos">
+					<p>Quarta e Quinta</p>
+					<h1>INTER<br>CARNES</h1>
+					<p>Carnes e Frios</p>
+				</div>
+			</div>
+		</div>
+		</section>
+		
+	</body>
+</html>
