@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercadinho Cidade</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="logo.png">
+</head>
+<body onload="hora()">
+    <header>
+        <img src="logo.png">
+    </header>
+    <section id="secao-1">
+        <div id="content">
+            <h1>Bem vindo ao <br> Cidade</h1>
+            <p>Sempre, em todos os momentos com você</p>
+            <img src="mascote.png" alt="">
+        </div>
+        
+        <p id="promo">Promoções:</p>
+        <div id="grandfather">
+            <div id="father">
+                <div class="child">
+                    <p>Segunda e Terça</p>
+                    <h1>INTER<br>FRUTAS</h1>
+                    <p>Frutas, Legumes e Verduras</p>
+                </div>
+                <div class="child">
+                    <p>Quarta e Quinta</p>
+                    <h1>INTER<br>CARNES</h1>
+                    <p>Carnes e Frios</p>
+                </div>
+            </div>
+        </div>
+        <div id="relogio">
+            <p id="hora">12:39</p>
+            <p id="situacao">Estamos Abertos!</p>
+        </div>
+    </section>
+    <section id="secao-2">
+        <p>.</p>
+        <div id="interFrutas">
+            <img src="2.png" alt="">
+            <p>Esses dias de feira são dias de Hortifruti no <strong>Cidade</strong>! Corra para aproveitar as promoções e abastecer sua geladeira com tudo que você precisa para uma alimentação natural e saudável.</p>
+            <button onclick="aviso()">Ver</button>
+        </div>
+        <div id="interCarnes">
+            <img src='bannerC.png'>
+            <p>Se vai planejar aquele churrasco pro final de semana já sabe né, referência de carne de qualidade é <strong>Cidade</strong>! Então aproveita que Quarta e Quinta temos promoções, não fique de fora e aproveite!</p>
+            <button onclick="aviso()">Ver</button>
+        </div>
+    </section>
+    
+    <section id="entrega">
+        <h1>Nós entregamos para você</h1>
+        <div>
+        <p>Fez as compras mas está difícil levá-las? O Cidade resolve! Nas compras a partir de R$30 entregamos seus pedidos até sua casa</p>
+        <img src="entregador.png">
+        </div>
+    </section>
+    <section id="whatsapp">
+      <h1>Peça pelo Whatsapp</h1>
+      <img src="smartphone.png">
+      <p>Quer fazer compras mas não quer sair de casa? Em compras a partir de R$30 você pode fazer seu pedido pelo whatsapp que vamos passar e entregar seu pedido até você</p>
+      <img id="zap-icone" src="whatsapp.png">
+      <p>(85) 8538-3529</p>
+    </section>
+    <section id="secao-4">
+        <h1>Nossas formas de <br> pagamento</h1>
+        <div id="metodospagamento">
+        <ul>
+            <li><img src="iconedinheiro.png" alt="">Dinheiro</li>
+            <li><img src="iconecartao.png" alt="">Débito/Crédito</li>
+            <li><img src="iconeVL.png" alt="">Vale Alimentação</li>
+            <li><img src="iconeqr.png" alt="">CAIXA Tem (QRCode)</li>
+        </ul>
+        <img src="pay.png" alt=""> 
+         </div>
+        <div id="aviso">
+        <h1>Aviso</h1>
+        <img src="pix.png">
+        <img src="nfc.png">
+        
+        <p>Por questão de segurança, não estamos aceitando pagamentos via <strong>PIX</strong> ou por <strong>aproximação</strong></p>
+        </div>
+    </section>
+    <section id="secao-5">
+      <h1>Aqui tem Banco 24h</h1>
+      <p>Precisando fazer um saque, pode vir no Cidade! Temos disponível um Banco 24h. Assim você não precisa ir até agencias </p>
+      <img src="saque.png">
+      <img src="atm.png">
+    </section>
+    <section id="secao-3">
+         <img src="rota.png">
+        <div>
+        <h1>Como chegar</h1>
+        <p>Na rua Simão Santos, São Bento, no parque Itamaraty</p>
+        </div>
+       
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1990.3794110189824!2d-38.492948!3d-3.8618496!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c7507b75064909%3A0xea86d0d2381c8688!2sMercadinho%20Cidade%20(S%C3%A3o%20Bento)!5e0!3m2!1spt-BR!2sbr!4v1660146697991!5m2!1spt-BR!2sbr" width="0" height="00" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+    <script type="text/javaScript" charset="utf-8">
+       function hora() {
+        	var tempo = new Date();
+  var dia = tempo.getDay();
+	var hora  = tempo.getHours();
+	var min = tempo.getMinutes();
+	var seg = tempo.getSeconds()
+  var relogio = document.querySelector('#hora');
+  var situacao = document.getElementById('situacao');
+  var funcionamento = document.querySelector('#secao-2 p:first-child');
+  // Relógio
+  if(min < 10){
+  	relogio.innerHTML = hora + ":0" + min
+	} else{
+  relogio.innerHTML= hora + ":" + min ; 
+  	}
+  	//Situação
+  	if(dia > 0 /*Se for dia da semana */){
+  	  if(hora >6 && hora < 21){
+  	    situacao.innerHTML = 'Estamos Abertos!';
+  	    funcionamento.innerHTML = 'Nós do Mercadinho Cidade desejamos boas-vindas. Confira e aproveite nossas promoções no catálogo do site.'
+
+  	  } else {
+  	    situacao.innerHTML = 'Estamos Fechados!';
+  	    funcionamento.innerHTML ='Fechamos nossas atividades por hoje! Amanhã reabrimos a partir das 7h até às 21h.'
+  	  }
+  	} else /* Se for Domingo */{
+  	  if(hora >6 && hora <20) {
+  	    situacao.innerHTML = 'Estamos Abertos!';
+  	    funcionamento.innerHTML = 'Nós do Mercadinho Cidade desejamos boas-vindas. Confira e aproveite nossas promoções no catálogo do site.'
+  	  } else{
+  	    situacao.innerHTML = 'Estamos Fechados!';
+  	    funcionamento.innerHTML = 'Estamos fechados, mas não pare por aí, confira nossas promoções para amanhã!'
+
+  	  }
+  	}
+  	// FUNCIONAMENTO
+  	
+  	
+  	setTimeout('hora()', 10);
+}
+ 
+function aviso() {
+    alert('Em desenvolvimento 👨‍💻')
+      
+}
+
+    </script>
+</body>
+</html>
